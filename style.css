@@ -1,0 +1,142 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #0a1f33;
+    background-color: #ffffff;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    border-bottom: 1px solid #e6eef5;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0a1f33;
+    text-decoration: none;
+}
+
+.nav a {
+    margin-left: 28px;
+    text-decoration: none;
+    color: #0a1f33;
+    font-weight: 500;
+}
+
+/* HERO / PAGE HEADER */
+.hero,
+.page-header {
+    padding: 120px 60px 80px;
+    max-width: 1000px;
+}
+
+.hero h1,
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #4a647d;
+}
+
+/* SECTIONS */
+.section {
+    padding: 80px 60px;
+    max-width: 1000px;
+}
+
+.section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* CHIFFRES */
+.chiffres {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 60px;
+    background-color: #f4f9fc;
+}
+
+.chiffres div {
+    text-align: center;
+}
+
+.chiffres h2 {
+    font-size: 36px;
+    color: #3fa9f5;
+}
+
+/* BUSINESS UNITS GRID */
+.business-units {
+    display: flex;
+    gap: 40px;
+    padding: 80px 60px;
+}
+
+.bu {
+    flex: 1;
+    padding-top: 20px;
+    border-top: 3px solid #3fa9f5;
+}
+
+.bu a {
+    text-decoration: none;
+    color: #3fa9f5;
+    font-weight: 500;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f4f9fc;
+    font-size: 14px;
+    color: #4a647d;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 100px;
+    padding: 60px;
+    background-color: #0a1f33;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer a {
+    color: #cfe9ff;
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+}
+.logo-home {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-home img {
+    height: 96px;          /* ajustable selon ton logo */
+    width: auto;
+    display: block;
+}
+
+.logo-home span {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0a1f33;
+}
