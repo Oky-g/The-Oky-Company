@@ -19,11 +19,16 @@ body {
     border-bottom: 1px solid #e6eef5;
 }
 
+.header span:hover{
+    color: #3fa9f5;
+}
+
 .logo {
     font-size: 20px;
     font-weight: 600;
     color: #0a1f33;
     text-decoration: none;
+    border-radius: 15%;
 }
 
 .nav a {
@@ -31,6 +36,10 @@ body {
     text-decoration: none;
     color: #0a1f33;
     font-weight: 500;
+}
+
+.nav a:hover{
+    color: #3fa9f5;
 }
 
 /* HERO / PAGE HEADER */
@@ -133,6 +142,7 @@ body {
     height: 96px;          /* ajustable selon ton logo */
     width: auto;
     display: block;
+    border-radius: 10%;
 }
 
 .logo-home span {
