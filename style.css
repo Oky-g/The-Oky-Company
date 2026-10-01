@@ -142,7 +142,7 @@ body {
     height: 96px;          /* ajustable selon ton logo */
     width: auto;
     display: block;
-    border-radius: 10%;
+    border-radius: 14%;
 }
 
 .logo-home span {
