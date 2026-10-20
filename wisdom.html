@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oky WISDOM</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/jfif" href="Logo OKY WISDOM.jfif">
@@ -29,6 +30,31 @@
     <p>La technologie, pensée pour durer.</p>
 </section>
 
+<section class="countdown-section" aria-labelledby="countdown-title">
+    <p class="countdown-eyebrow">Le grand rendez-vous approche</p>
+    <h2 id="countdown-title">Le compte à rebours est lancé</h2>
+    <p class="countdown-description">Rendez-vous le 28 octobre 2026 à 18 h.</p>
+    <div class="countdown" aria-label="Temps restant">
+        <div class="countdown-unit">
+            <span id="countdown-days">0</span>
+            <p>jours</p>
+        </div>
+        <div class="countdown-unit">
+            <span id="countdown-hours">00</span>
+            <p>heures</p>
+        </div>
+        <div class="countdown-unit">
+            <span id="countdown-minutes">00</span>
+            <p>minutes</p>
+        </div>
+        <div class="countdown-unit">
+            <span id="countdown-seconds">00</span>
+            <p>secondes</p>
+        </div>
+    </div>
+    <p class="countdown-status" id="countdown-status" role="status"></p>
+</section>
+
 <section class="section">
     <p>
         Oky WISDOM développe des solutions informatiques globales et intégrées,
@@ -52,6 +78,41 @@
         <a href="mentions-legales.html">Mentions légales</a>
     </div>
 </footer>
+
+<script>
+    const countdownTarget = new Date(2026, 9, 28, 18, 0, 0);
+    const countdownElements = {
+        days: document.getElementById("countdown-days"),
+        hours: document.getElementById("countdown-hours"),
+        minutes: document.getElementById("countdown-minutes"),
+        seconds: document.getElementById("countdown-seconds"),
+        status: document.getElementById("countdown-status")
+    };
+    let countdownInterval;
+
+    function updateCountdown() {
+        const remaining = countdownTarget.getTime() - Date.now();
+
+        if (remaining <= 0) {
+            countdownElements.days.textContent = "0";
+            countdownElements.hours.textContent = "00";
+            countdownElements.minutes.textContent = "00";
+            countdownElements.seconds.textContent = "00";
+            countdownElements.status.textContent = "Le compte à rebours est terminé !";
+            window.clearInterval(countdownInterval);
+            return;
+        }
+
+        const secondsRemaining = Math.floor(remaining / 1000);
+        countdownElements.days.textContent = Math.floor(secondsRemaining / 86400);
+        countdownElements.hours.textContent = String(Math.floor((secondsRemaining % 86400) / 3600)).padStart(2, "0");
+        countdownElements.minutes.textContent = String(Math.floor((secondsRemaining % 3600) / 60)).padStart(2, "0");
+        countdownElements.seconds.textContent = String(secondsRemaining % 60).padStart(2, "0");
+    }
+
+    updateCountdown();
+    countdownInterval = window.setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
